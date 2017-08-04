@@ -12,7 +12,7 @@ public class EventTest {
     @Test
     public void newEvent_SetPropertiesOfNewEvent_() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "wine and beer", "Beyonce");
-        assertEquals(0, newEvent.numOfGuests);
+        assertEquals(50, newEvent.numOfGuests);
         assertEquals("soup and salad", newEvent.foodSelection);
     }
 }
