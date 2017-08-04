@@ -62,7 +62,7 @@ public class EventTest {
     @Test
     public void newEvent_GetFreeFleas_string() throws Exception {
         Event newEvent = new Event(100, "soup and salad", "imported beers", "beyonce");
-        assertEquals("Wed have added the flea circus to your entertainment selection.", newEvent.getFreeFleas(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection), newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)), newEvent.numOfGuests)));
+        assertEquals("We have added the flea circus to your entertainment selection.", newEvent.getFreeFleas(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection), newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)), newEvent.numOfGuests)));
     }
 
 }
