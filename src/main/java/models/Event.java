@@ -2,16 +2,16 @@ package models;
 
 public class Event {
 
-    public int numOfGuests;
-    public String foodSelection;
-    public String beverageSelection;
-    public String entertainmentSelection;
+    private int numOfGuests;
+    private String foodSelection;
+    private String beverageSelection;
+    private String entertainmentSelection;
 
     public Event(int numOfGuests, String foodSelection, String beverageSelection, String entertainmentSelection) {
-        this.numOfGuests = numOfGuests;
-        this.foodSelection = foodSelection;
-        this.beverageSelection = beverageSelection;
-        this.entertainmentSelection = entertainmentSelection;
+        this.setNumOfGuests(numOfGuests);
+        this.setFoodSelection(foodSelection);
+        this.setBeverageSelection(beverageSelection);
+        this.setEntertainmentSelection(entertainmentSelection);
     }
 
     public int getFoodPricePerGuest(String foodSelection) {
@@ -98,5 +98,35 @@ public class Event {
     }
 
 
+    public int getNumOfGuests() {
+        return numOfGuests;
+    }
 
+    public void setNumOfGuests(int numOfGuests) {
+        this.numOfGuests = numOfGuests;
+    }
+
+    public String getFoodSelection() {
+        return foodSelection;
+    }
+
+    public void setFoodSelection(String foodSelection) {
+        this.foodSelection = foodSelection;
+    }
+
+    public String getBeverageSelection() {
+        return beverageSelection;
+    }
+
+    public void setBeverageSelection(String beverageSelection) {
+        this.beverageSelection = beverageSelection;
+    }
+
+    public String getEntertainmentSelection() {
+        return entertainmentSelection;
+    }
+
+    public void setEntertainmentSelection(String entertainmentSelection) {
+        this.entertainmentSelection = entertainmentSelection;
+    }
 }
