@@ -43,7 +43,7 @@ public class EventTest {
     @Test
     public void newEvent_GetEntertainmentPrice_10000() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
-        assertEquals(1000, newEvent.getEntertainmentPrice(newEvent.entertainmentSelection));
+        assertEquals(20000, newEvent.getEntertainmentPrice(newEvent.entertainmentSelection));
     }
 
 }
