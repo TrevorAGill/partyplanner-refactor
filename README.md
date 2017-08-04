@@ -29,10 +29,6 @@ _This is a command line application that requests certain information from the u
   * _Input: discount code = "20% OFF"_
   * _Output: "Your discounted event price is $17,000"_
 
-## Known Bugs
-
-* _No known bugs_
-
 ## Support and contact details
 
 _Please reach out to Trevor Gill at trevor.a.gill@gmail.com with any questions or comments._
