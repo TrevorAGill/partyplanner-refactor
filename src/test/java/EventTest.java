@@ -15,4 +15,10 @@ public class EventTest {
         assertEquals(50, newEvent.numOfGuests);
         assertEquals("soup and salad", newEvent.foodSelection);
     }
+
+    @Test
+    public void newEvent_GetPriceOfFoodSelection_() throws Exception {
+        Event newEvent = new Event(50, "soup and salad", "wine and beer", "Beyonce");
+        assertEquals(10, newEvent.getFoodPricePerGuest(newEvent.foodSelection));
+    }
 }

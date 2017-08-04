@@ -20,8 +20,11 @@ _This is a command line application that requests certain information from the u
 * _An event instance should hold several properties_
   * _Input: new Event_
   * _Output: event = {# of people, food served, beverages served, entertainment}_
-* _It should be able to calculate an event cost based on event properties_
-  * _Input: event = {50, "soup and salad", "wine and beer", "Beyonce"}_
+* _It should be able to calculate a "price per guest" based on the food, beverage, and entertainment selection_
+  * _Input: foodSelection = "soup and salad", beverageSelection = "wine and beer", entertainmentSelection = "Beyonce"_
+  * _Output: "Your price per guest will be $500"_
+* _It should be able to calculate a total event price by multiplying "price per guest" by guest count_
+  * _Input: pricePerGuest = $500, guestCount = 100_
   * _Output: "Your event will cost an estimated $50,000"_
 * _The event cost should be reduced with the use of a discount code_
   * _Input: discount code = "1/2 price Beyonce"_
