@@ -40,4 +40,10 @@ public class EventTest {
         assertEquals(1000, newEvent.getTotalGuestCostExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests));
     }
 
+    @Test
+    public void newEvent_GetEntertainmentPrice_10000() throws Exception {
+        Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
+        assertEquals(1000, newEvent.getEntertainmentPrice(newEvent.entertainmentSelection));
+    }
+
 }

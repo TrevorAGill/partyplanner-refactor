@@ -53,5 +53,24 @@ public class Event {
         return totalGuestCost;
     }
 
+    public int getEntertainmentPrice(String entertainmentSelection) {
+        int entertainmentPrice = 0;
+        switch (entertainmentSelection) {
+            case "flea circus":
+                entertainmentPrice = 100;
+                break;
+            case "chin balancer":
+                entertainmentPrice = 500;
+                break;
+            case "mariachi band":
+                entertainmentPrice = 2000;
+                break;
+            case "beyonce":
+                entertainmentPrice = 20000;
+                break;
+        }
+        return entertainmentPrice;
+    }
+
 
 }
