@@ -49,7 +49,7 @@ public class EventTest {
     @Test
     public void newEvent_GetTotalEventPricePrediscount_21000() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
-        assertEquals(20000, newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection)));
+        assertEquals(21000, newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection)));
     }
 
 }
