@@ -43,5 +43,10 @@ public class Event {
         return beveragePrice;
     }
 
+    public int getFBPricePerGuest(int foodPrice, int beveragePrice) {
+        int fbPerGuest = foodPrice + beveragePrice;
+        return fbPerGuest;
+    }
+
 
 }
