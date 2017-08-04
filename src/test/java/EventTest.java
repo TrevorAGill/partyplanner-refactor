@@ -33,6 +33,6 @@ public class EventTest {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "Beyonce");
         int foodPrice = 15;
         int beveragePrice = 5;
-        assertEquals(5, newEvent.getFBPricePerGuest(foodPrice,beveragePrice));
+        assertEquals(20, newEvent.getFBPricePerGuest(foodPrice,beveragePrice));
     }
 }
