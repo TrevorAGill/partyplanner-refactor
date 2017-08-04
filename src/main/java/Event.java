@@ -48,9 +48,9 @@ public class Event {
         return fbPerGuest;
     }
 
-    public int getTotalGuestCostExcludingEntertainment(int fbPerGuest, int guestCount) {
-        int totalGuestCost = fbPerGuest * guestCount;
-        return totalGuestCost;
+    public int getTotalGuestPriceExcludingEntertainment(int fbPerGuest, int guestCount) {
+        int totalGuestPrice = fbPerGuest * guestCount;
+        return totalGuestPrice;
     }
 
     public int getEntertainmentPrice(String entertainmentSelection) {
@@ -70,6 +70,11 @@ public class Event {
                 break;
         }
         return entertainmentPrice;
+    }
+
+    public int getTotalEventPriceBeforeDiscounts(int totalGuestPrice, int entertainmentPrice) {
+        int totalEventPricePrediscount = totalGuestPrice + entertainmentPrice;
+        return totalEventPricePrediscount;
     }
 
 

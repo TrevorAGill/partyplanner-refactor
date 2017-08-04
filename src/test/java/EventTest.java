@@ -35,15 +35,21 @@ public class EventTest {
     }
 
     @Test
-    public void newEvent_GetTotalFBCostForAllGuests_1000() throws Exception {
+    public void newEvent_GetTotalFBPriceForAllGuests_1000() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "Beyonce");
-        assertEquals(1000, newEvent.getTotalGuestCostExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests));
+        assertEquals(1000, newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests));
     }
 
     @Test
     public void newEvent_GetEntertainmentPrice_10000() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
         assertEquals(20000, newEvent.getEntertainmentPrice(newEvent.entertainmentSelection));
+    }
+
+    @Test
+    public void newEvent_GetTotalEventPricePrediscount_21000() throws Exception {
+        Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
+        assertEquals(20000, newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection)));
     }
 
 }
