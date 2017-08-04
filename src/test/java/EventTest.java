@@ -56,7 +56,7 @@ public class EventTest {
     @Test
     public void newEvent_Get20PercentOffTotalPrice_16800() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "beyonce");
-        assertEquals(16850, newEvent.get20PercentOffTotal(newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection))));
+        assertEquals(16800, newEvent.get20PercentOffTotal(newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection))));
     }
 
 }
