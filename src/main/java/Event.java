@@ -48,5 +48,10 @@ public class Event {
         return fbPerGuest;
     }
 
+    public int getTotalGuestCostExcludingEntertainment(int fbPerGuest, int guestCount) {
+        int totalGuestCost = fbPerGuest * guestCount;
+        return totalGuestCost;
+    }
+
 
 }

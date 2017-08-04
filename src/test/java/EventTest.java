@@ -31,8 +31,13 @@ public class EventTest {
     @Test
     public void newEvent_GetPerGuestFBPrice_20() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "Beyonce");
-        int foodPrice = 15;
-        int beveragePrice = 5;
-        assertEquals(20, newEvent.getFBPricePerGuest(foodPrice,beveragePrice));
+        assertEquals(20, newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)));
     }
+
+    @Test
+    public void newEvent_GetTotalFBCostForAllGuests_1000() throws Exception {
+        Event newEvent = new Event(50, "soup and salad", "soda and water", "Beyonce");
+        assertEquals(1001, newEvent.getTotalGuestCostExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests));
+    }
+
 }
