@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is a command line application that requests certain information from the user about the party that they want to throw, such as number of guests, what beverages will be served, etc. and then returns to them an estimated cost of our services for organizing and catering their party. The application also includes support for discount codes that the user can enter to reduce their total price._
+_This is a command line application that requests certain information from the user about the party that they want to throw, such as number of guests, what food and beverages will be served, and entertainment options and then returns to them an estimated cost of our services for organizing and catering their party. The application is built with the assumption that total food and beverage cost will be based on the number of guests, whereas entertainment will charge the same flat rate regardless of the number of guests. The application also includes support for discount codes that the user can enter to reduce their total price._
 
 ## Link
 
@@ -20,9 +20,9 @@ _This is a command line application that requests certain information from the u
 * _An event instance should hold several properties_
   * _Input: new Event_
   * _Output: event = {# of people, food served, beverages served, entertainment}_
-* _It should be able to calculate a "price per guest" based on the food, beverage, and entertainment selection_
-  * _Input: foodSelection = "soup and salad", beverageSelection = "wine and beer", entertainmentSelection = "Beyonce"_
-  * _Output: "Your price per guest will be $500"_
+* _It should be able to calculate a "F+B price per guest" based on the food and beverage selection_
+  * _Input: foodSelection = "soup and salad", beverageSelection = "wine and beer"_
+  * _Output: "Your price per guest for F+B will be $50."_
 * _It should be able to calculate a total event price by multiplying "price per guest" by guest count_
   * _Input: pricePerGuest = $500, guestCount = 100_
   * _Output: "Your event will cost an estimated $50,000"_

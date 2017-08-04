@@ -1,11 +1,13 @@
+package models;
+
 public class Event {
 
-    int numOfGuests;
-    String foodSelection;
-    String beverageSelection;
-    String entertainmentSelection;
+    public int numOfGuests;
+    public String foodSelection;
+    public String beverageSelection;
+    public String entertainmentSelection;
 
-    Event(int numOfGuests, String foodSelection, String beverageSelection, String entertainmentSelection) {
+    public Event(int numOfGuests, String foodSelection, String beverageSelection, String entertainmentSelection) {
         this.numOfGuests = numOfGuests;
         this.foodSelection = foodSelection;
         this.beverageSelection = beverageSelection;
@@ -68,6 +70,9 @@ public class Event {
             case "beyonce":
                 entertainmentPrice = 20000;
                 break;
+            case "none":
+                entertainmentPrice = 0;
+                break;
         }
         return entertainmentPrice;
     }
@@ -76,6 +81,12 @@ public class Event {
         int totalEventPricePrediscount = totalGuestPrice + entertainmentPrice;
         return totalEventPricePrediscount;
     }
+
+    public int get20PercentOffTotal(int totalEventPricePrediscount) {
+        int eventPrice20Off = (int)(totalEventPricePrediscount*(1-(20.0f/100.0f)));
+        return eventPrice20Off;
+    }
+
 
 
 }
