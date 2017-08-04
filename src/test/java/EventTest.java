@@ -25,6 +25,6 @@ public class EventTest {
     @Test
     public void newEvent_GetPriceOfBeverageSelection_() throws Exception {
         Event newEvent = new Event(50, "soup and salad", "soda and water", "Beyonce");
-        assertEquals(4, newEvent.getBeveragePricePerGuest(newEvent.beverageSelection));
+        assertEquals(5, newEvent.getBeveragePricePerGuest(newEvent.beverageSelection));
     }
 }
