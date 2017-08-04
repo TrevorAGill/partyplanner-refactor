@@ -14,16 +14,34 @@ public class Event {
 
     public int getFoodPricePerGuest(String foodSelection) {
         int foodPrice = 0;
-        if (foodSelection.equals("compost leftovers")) {
-            foodPrice = 2;
-        } else if (foodSelection.equals("hors d'oeuvres only")) {
-            foodPrice = 10;
-        } else if (foodSelection.equals("soup and salad")) {
-            foodPrice = 15;
-        } else if (foodSelection.equals("4 course meal")) {
-            foodPrice = 35;
+        switch (foodSelection) {
+            case "compost leftovers": foodPrice = 2;
+            break;
+            case "hors d'oeuvres only": foodPrice = 10;
+            break;
+            case "soup and salad": foodPrice = 15;
+            break;
+            case "4 course meal": foodPrice = 35;
+            break;
         }
-         return foodPrice;
+        return foodPrice;
     }
+
+    public int getBeveragePricePerGuest(String beverageSelection) {
+        int beveragePrice = 0;
+        switch (beverageSelection) {
+            case "soda and water":
+                beveragePrice = 5;
+                break;
+            case "domestic beers":
+                beveragePrice = 15;
+                break;
+            case "wine and import beers":
+                beveragePrice = 30;
+                break;
+        }
+        return beveragePrice;
+    }
+
 
 }
