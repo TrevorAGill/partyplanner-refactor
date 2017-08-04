@@ -59,4 +59,10 @@ public class EventTest {
         assertEquals(16800, newEvent.get20PercentOffTotal(newEvent.getTotalEventPriceBeforeDiscounts(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection),newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)),newEvent.numOfGuests),newEvent.getEntertainmentPrice(newEvent.entertainmentSelection))));
     }
 
+    @Test
+    public void newEvent_GetFreeFleas_string() throws Exception {
+        Event newEvent = new Event(100, "soup and salad", "imported beers", "beyonce");
+        assertEquals("Wed have added the flea circus to your entertainment selection.", newEvent.getFreeFleas(newEvent.getTotalGuestPriceExcludingEntertainment(newEvent.getFBPricePerGuest(newEvent.getFoodPricePerGuest(newEvent.foodSelection), newEvent.getBeveragePricePerGuest(newEvent.beverageSelection)), newEvent.numOfGuests)));
+    }
+
 }

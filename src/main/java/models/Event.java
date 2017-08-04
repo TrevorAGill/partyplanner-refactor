@@ -87,6 +87,16 @@ public class Event {
         return eventPrice20Off;
     }
 
+    public String getFreeFleas(int totalFB) {
+        String outputMessage = "";
+        if(totalFB < 1000) {
+            outputMessage = "Sorry, but your order doesn't qualify for this discount code.";
+        } else if (totalFB >= 1000) {
+            outputMessage = "We have added the flea circus to your entertainment selection.";
+        }
+        return outputMessage;
+    }
+
 
 
 }
